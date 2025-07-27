@@ -249,7 +249,8 @@ services:
       - prometheus
 
   fluent-bit:
-    image: fluent/fluent-bit:1.9.3
+    image: cr.fluentbit.io/fluent/fluent-bit:2.2.0-debug
+    container_name: fluent-bit
     volumes:
       - ./fluent-bit/conf:/fluent-bit/etc
     ports:
